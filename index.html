@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern SaaS Homepage</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(120deg, #5e72e4, #2dce89);
+      color: white;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+
+    .btn-primary {
+      background-color: #00bcd4;
+      color: white;
+      padding: 5px 10px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #009c98;
+    }
+
+    /* Features Section */
+    .features {
+      padding: 60px 20px;
+      background-color: white;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .feature-cards {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .feature-card {
+      background-color: #f9f9f9;
+      padding: 30px;
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card h3 {
+      font-size: 1.6rem;
+      color: #5e72e4;
+      margin-bottom: 15px;
+    }
+
+    .feature-card p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      padding: 60px 20px;
+      background-color: #f0f4f8;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .testimonial-cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .testimonial-card {
+      background-color: white;
+      padding: 30px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .testimonial-card p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .testimonial-card p:last-child {
+      font-style: italic;
+      color: #333;
+    }
+
+    /* Pricing Section */
+    .pricing {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    .pricing h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .pricing-table {
+      display: flex;
+      justify-content: space-around;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .pricing-card {
+      background-color: #e9f1f6;
+      padding: 40px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .pricing-card h3 {
+      font-size: 2rem;
+      color: #5e72e4;
+      margin-bottom: 20px;
+    }
+
+    .pricing-card p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .pricing-card .price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #2dce89;
+      margin: 20px 0;
+    }
+
+    .pricing-card .cta-btn {
+      background-color: #00bcd4;
+      color: white;
+      padding: 16px 40px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    .footer-links {
+      margin-top: 15px;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .feature-cards,
+      .testimonial-cards,
+      .pricing-table {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature-card,
+      .testimonial-card,
+      .pricing-card {
+        width: 90%;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Unlock Your Business Potential with Our SaaS Solution</h1>
+      <p>Experience seamless integration, efficient workflows, and scalable growth with our platform.</p>
+      <a href="#get-started" class="btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <h2>Our Features</h2>
+    <div class="feature-cards">
+      <div class="feature-card">
+        <h3>Real-Time Analytics</h3>
+        <p>Gain insights with our real-time data analytics and make better business decisions.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Cloud-Based</h3>
+        <p>Access your tools and data from anywhere with our secure cloud platform.</p>
+      </div>
+      <div class="feature-card">
+        <h3>24/7 Support</h3>
+        <p>Our dedicated support team is available to assist you at any time of the day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>"The platform has revolutionized the way we work. It’s fast, intuitive, and has increased our productivity." </p>
+        <p>- John D., CEO of Tech Enterprises</p>
+      </div>
+      <div class="testimonial-card">
+        <p>"I love the customer support! Always available, always helpful. My team can rely on the platform 24/7." </p>
+        <p>- Sarah T., CTO of Web Solutions</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <h2>Choose Your Plan</h2>
+    <div class="pricing-table">
+      <div class="pricing-card">
+        <h3>Basic Plan</h3>
+        <p>Perfect for small teams just getting started.</p>
+        <div class="price">$19/month</div>
+        <a href="#" class="cta-btn">Start Free Trial</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Pro Plan</h3>
+        <p>Great for growing businesses with more features.</p>
+        <div class="price">$49/month</div>
+        <a href="#" class="cta-btn">
